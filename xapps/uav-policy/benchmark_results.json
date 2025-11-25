@@ -1,0 +1,34 @@
+{
+  "latency": {
+    "p50": 1.0134705808013678,
+    "p95": 1.2928659562021494,
+    "p99": 1.497540157288313,
+    "mean": 1.038614094723016,
+    "stdev": 0.13318150862427705,
+    "min": 0.8627527859061956,
+    "max": 1.497540157288313
+  },
+  "throughput": {
+    "elapsed_seconds": 10.000086345942691,
+    "request_count": 9662,
+    "rps": 966.1916573270528,
+    "mean_request_time_ms": 1.032602116854985
+  },
+  "concurrent_uavs": {
+    "num_uavs": 50,
+    "mean_latency_ms": 1.0180105129256845,
+    "p99_latency_ms": 1.2711649760603905
+  },
+  "service_profile": {
+    "simple_mean_ms": 0.968673883471638,
+    "profile_mean_ms": 1.0358528816141188,
+    "overhead_ms": 0.06717899814248085,
+    "overhead_percent": 6.935151167874736
+  },
+  "flight_plan": {
+    "no_plan_mean_ms": 1.052226626779884,
+    "plan_mean_ms": 1.063709449954331,
+    "overhead_ms": 0.011482823174446821,
+    "overhead_percent": 1.0912880250509873
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "benchmark": "trajectory_predictor",
+  "timestamp": "2025-11-22 10:28:47",
+  "results": [
+    {
+      "name": "kalman_update",
+      "iterations": 500,
+      "latency_ms": {
+        "p50": 0.0398,
+        "p95": 0.0448,
+        "p99": 0.0536,
+        "mean": 0.0407
+      },
+      "throughput_ops": 24558.98,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 0.06
+    },
+    {
+      "name": "multi_uav_1",
+      "iterations": 500,
+      "latency_ms": {
+        "p50": 0.0395,
+        "p95": 0.0441,
+        "p99": 0.053,
+        "mean": 0.0403
+      },
+      "throughput_ops": 24834.03,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 0.05
+    },
+    {
+      "name": "multi_uav_5",
+      "iterations": 2500,
+      "latency_ms": {
+        "p50": 0.0382,
+        "p95": 0.0421,
+        "p99": 0.0451,
+        "mean": 0.0387
+      },
+      "throughput_ops": 25838.25,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 0.21
+    },
+    {
+      "name": "multi_uav_10",
+      "iterations": 5000,
+      "latency_ms": {
+        "p50": 0.0381,
+        "p95": 0.0435,
+        "p99": 0.0677,
+        "mean": 0.0391
+      },
+      "throughput_ops": 25586.45,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 0.42
+    },
+    {
+      "name": "multi_uav_50",
+      "iterations": 25000,
+      "latency_ms": {
+        "p50": 0.0387,
+        "p95": 0.0427,
+        "p99": 0.0466,
+        "mean": 0.0392
+      },
+      "throughput_ops": 25533.67,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 2.14
+    },
+    {
+      "name": "multi_uav_100",
+      "iterations": 50000,
+      "latency_ms": {
+        "p50": 0.0399,
+        "p95": 0.0435,
+        "p99": 0.0473,
+        "mean": 0.0402
+      },
+      "throughput_ops": 24856.49,
+      "accuracy": {
+        "mean_error_m": 0.0,
+        "rmse_m": 0.0
+      },
+      "memory_peak_mb": 4.28
+    }
+  ],
+  "accuracy_vs_horizon": {
+    "10": {
+      "kalman_rmse_m": 1.5497,
+      "polynomial_rmse_m": 0.9499,
+      "hybrid_rmse_m": 1.4986,
+      "latency_ms": 0.2726
+    },
+    "20": {
+      "kalman_rmse_m": 1.6443,
+      "polynomial_rmse_m": 0.9875,
+      "hybrid_rmse_m": 1.5338,
+      "latency_ms": 0.2727
+    },
+    "50": {
+      "kalman_rmse_m": 1.8651,
+      "polynomial_rmse_m": 1.0054,
+      "hybrid_rmse_m": 1.5245,
+      "latency_ms": 0.273
+    },
+    "100": {
+      "kalman_rmse_m": 2.3321,
+      "polynomial_rmse_m": 1.1741,
+      "hybrid_rmse_m": 1.4542,
+      "latency_ms": 0.2734
+    },
+    "200": {
+      "kalman_rmse_m": 3.4689,
+      "polynomial_rmse_m": 1.925,
+      "hybrid_rmse_m": 1.7999,
+      "latency_ms": 0.2728
+    },
+    "500": {
+      "kalman_rmse_m": 8.453,
+      "polynomial_rmse_m": 6.7445,
+      "hybrid_rmse_m": 5.3121,
+      "latency_ms": 0.2728
+    }
+  },
+  "trajectory_types": {
+    "linear": {
+      "rmse_m": 0.9853,
+      "mean_error_m": 0.916,
+      "max_error_m": 2.0524,
+      "latency_ms": 0.1361
+    },
+    "circular": {
+      "rmse_m": 0.9994,
+      "mean_error_m": 0.9179,
+      "max_error_m": 2.4021,
+      "latency_ms": 0.1357
+    },
+    "figure8": {
+      "rmse_m": 9.9013,
+      "mean_error_m": 9.3251,
+      "max_error_m": 14.56,
+      "latency_ms": 0.1362
+    }
+  }
+}

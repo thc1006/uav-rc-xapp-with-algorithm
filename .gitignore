@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+artifacts/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Numba cache
+*.nbc
+*.nbi
+
+# Benchmark results (generated)
+benchmarks/results/

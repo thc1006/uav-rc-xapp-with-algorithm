@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uav-policy"
+version = "0.1.0"
+description = "Policy engine for UAV resource allocation in O-RAN environments"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "O-RAN Alliance", email = "info@o-ran.org"}
+]
+keywords = ["uav", "o-ran", "resource-allocation", "policy-engine"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications",
+    "Topic :: Internet",
+]
+
+dependencies = [
+    "flask>=2.3.0",
+    "werkzeug>=2.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.4.0",
+]
+
+[project.scripts]
+uav-policy = "uav_policy.main:main"
+
+[tool.setuptools]
+packages = ["uav_policy"]
+package-dir = {"uav_policy" = "src/uav_policy"}
+
+[tool.setuptools.package-data]
+uav_policy = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/uav_policy --cov-report=term-missing"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true

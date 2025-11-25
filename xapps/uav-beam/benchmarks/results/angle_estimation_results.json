@@ -1,0 +1,291 @@
+{
+  "benchmark": "angle_estimation",
+  "timestamp": "2025-11-22 10:32:18",
+  "results": [
+    {
+      "name": "music_16_elements",
+      "method": "MUSIC",
+      "antenna_elements": 16,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 1.1155,
+        "p95": 1.1969,
+        "p99": 1.2578,
+        "mean": 1.1116
+      },
+      "throughput_ops": 899.62,
+      "accuracy": {
+        "mean_error_deg": 1.1593,
+        "rmse_deg": 1.2264
+      },
+      "memory_peak_mb": 1.07
+    },
+    {
+      "name": "music_32_elements",
+      "method": "MUSIC",
+      "antenna_elements": 32,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 5.5298,
+        "p95": 5.6876,
+        "p99": 5.6975,
+        "mean": 5.4
+      },
+      "throughput_ops": 185.19,
+      "accuracy": {
+        "mean_error_deg": 1.2493,
+        "rmse_deg": 1.3248
+      },
+      "memory_peak_mb": 1.52
+    },
+    {
+      "name": "music_64_elements",
+      "method": "MUSIC",
+      "antenna_elements": 64,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 25.48,
+        "p95": 34.0969,
+        "p99": 42.9239,
+        "mean": 28.2229
+      },
+      "throughput_ops": 35.43,
+      "accuracy": {
+        "mean_error_deg": 1.0504,
+        "rmse_deg": 1.1249
+      },
+      "memory_peak_mb": 2.7
+    },
+    {
+      "name": "music_128_elements",
+      "method": "MUSIC",
+      "antenna_elements": 128,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 103.5509,
+        "p95": 113.6862,
+        "p99": 233.0442,
+        "mean": 108.3267
+      },
+      "throughput_ops": 9.23,
+      "accuracy": {
+        "mean_error_deg": 1.0337,
+        "rmse_deg": 1.1098
+      },
+      "memory_peak_mb": 4.91
+    },
+    {
+      "name": "esprit_16_elements",
+      "method": "ESPRIT",
+      "antenna_elements": 16,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.1366,
+        "p95": 0.1741,
+        "p99": 0.2868,
+        "mean": 0.1418
+      },
+      "throughput_ops": 7050.61,
+      "accuracy": {
+        "mean_error_deg": 41.2093,
+        "rmse_deg": 49.5958
+      },
+      "memory_peak_mb": 0.12
+    },
+    {
+      "name": "esprit_32_elements",
+      "method": "ESPRIT",
+      "antenna_elements": 32,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.1437,
+        "p95": 0.1621,
+        "p99": 0.3456,
+        "mean": 0.1483
+      },
+      "throughput_ops": 6744.32,
+      "accuracy": {
+        "mean_error_deg": 44.8255,
+        "rmse_deg": 53.9795
+      },
+      "memory_peak_mb": 0.21
+    },
+    {
+      "name": "esprit_64_elements",
+      "method": "ESPRIT",
+      "antenna_elements": 64,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.1781,
+        "p95": 0.249,
+        "p99": 0.3724,
+        "mean": 0.1868
+      },
+      "throughput_ops": 5352.72,
+      "accuracy": {
+        "mean_error_deg": 24.5378,
+        "rmse_deg": 31.738
+      },
+      "memory_peak_mb": 0.41
+    },
+    {
+      "name": "esprit_128_elements",
+      "method": "ESPRIT",
+      "antenna_elements": 128,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.191,
+        "p95": 0.2299,
+        "p99": 0.3297,
+        "mean": 0.1967
+      },
+      "throughput_ops": 5084.94,
+      "accuracy": {
+        "mean_error_deg": 22.386,
+        "rmse_deg": 25.7646
+      },
+      "memory_peak_mb": 0.74
+    },
+    {
+      "name": "beamspace_16_elements",
+      "method": "Beamspace",
+      "antenna_elements": 16,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.0773,
+        "p95": 0.1163,
+        "p99": 0.1755,
+        "mean": 0.082
+      },
+      "throughput_ops": 12198.43,
+      "accuracy": {
+        "mean_error_deg": 117.5086,
+        "rmse_deg": 120.5716
+      },
+      "memory_peak_mb": 0.12
+    },
+    {
+      "name": "beamspace_32_elements",
+      "method": "Beamspace",
+      "antenna_elements": 32,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.1311,
+        "p95": 0.251,
+        "p99": 0.4844,
+        "mean": 0.1472
+      },
+      "throughput_ops": 6791.26,
+      "accuracy": {
+        "mean_error_deg": 111.2711,
+        "rmse_deg": 113.7719
+      },
+      "memory_peak_mb": 0.2
+    },
+    {
+      "name": "beamspace_64_elements",
+      "method": "Beamspace",
+      "antenna_elements": 64,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.1803,
+        "p95": 0.1989,
+        "p99": 0.5063,
+        "mean": 0.1886
+      },
+      "throughput_ops": 5302.99,
+      "accuracy": {
+        "mean_error_deg": 108.4798,
+        "rmse_deg": 110.474
+      },
+      "memory_peak_mb": 0.4
+    },
+    {
+      "name": "beamspace_128_elements",
+      "method": "Beamspace",
+      "antenna_elements": 128,
+      "iterations": 50,
+      "latency_ms": {
+        "p50": 0.254,
+        "p95": 0.2776,
+        "p99": 0.7683,
+        "mean": 0.2668
+      },
+      "throughput_ops": 3748.58,
+      "accuracy": {
+        "mean_error_deg": 105.7412,
+        "rmse_deg": 107.0164
+      },
+      "memory_peak_mb": 0.73
+    }
+  ],
+  "method_comparison": {
+    "music": {
+      "latency_ms": {
+        "mean": 120.93,
+        "p95": 145.3199
+      },
+      "accuracy": {
+        "mean_error_deg": 0.4696,
+        "rmse_deg": 0.4975
+      },
+      "throughput_ops": 8.27
+    },
+    "esprit": {
+      "latency_ms": {
+        "mean": 0.1231,
+        "p95": 0.1617
+      },
+      "accuracy": {
+        "mean_error_deg": 33.9409,
+        "rmse_deg": 37.115
+      },
+      "throughput_ops": 8125.44
+    },
+    "beamspace": {
+      "latency_ms": {
+        "mean": 0.2138,
+        "p95": 0.1563
+      },
+      "accuracy": {
+        "mean_error_deg": 105.8113,
+        "rmse_deg": 107.4147
+      },
+      "throughput_ops": 4676.41
+    }
+  },
+  "snr_analysis": {
+    "-5": {
+      "music_rmse_deg": 51.1962,
+      "beamspace_rmse_deg": 82.9898
+    },
+    "0": {
+      "music_rmse_deg": 2.6461,
+      "beamspace_rmse_deg": 113.6864
+    },
+    "5": {
+      "music_rmse_deg": 1.0189,
+      "beamspace_rmse_deg": 116.0843
+    },
+    "10": {
+      "music_rmse_deg": 0.575,
+      "beamspace_rmse_deg": 113.9549
+    },
+    "15": {
+      "music_rmse_deg": 0.5166,
+      "beamspace_rmse_deg": 111.0575
+    },
+    "20": {
+      "music_rmse_deg": 0.448,
+      "beamspace_rmse_deg": 113.5898
+    },
+    "25": {
+      "music_rmse_deg": 0.4892,
+      "beamspace_rmse_deg": 106.9813
+    },
+    "30": {
+      "music_rmse_deg": 0.4915,
+      "beamspace_rmse_deg": 113.0448
+    }
+  }
+}

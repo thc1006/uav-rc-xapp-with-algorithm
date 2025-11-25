@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: uav-policy-xapp
+  namespace: oran-ric
+  labels:
+    app: uav-policy-xapp
+  annotations:
+    description: "HTTP service for UAV Policy xApp E2 indication handler"
+spec:
+  type: ClusterIP
+  selector:
+    app: uav-policy-xapp
+  ports:
+  - name: http
+    port: 5000
+    targetPort: 5000
+    protocol: TCP
+  sessionAffinity: None

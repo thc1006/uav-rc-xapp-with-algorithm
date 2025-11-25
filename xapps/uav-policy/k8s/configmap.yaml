@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: uav-policy-config
+  namespace: oran-ric
+  labels:
+    app: uav-policy-xapp
+data:
+  # Logging configuration
+  log_level: "INFO"
+
+  # Debug mode (set to "true" to enable)
+  debug: "false"
+
+  # Policy engine settings
+  overloaded_threshold: "0.8"
+  hysteresis_db: "3.0"
+  min_prb_quota: "5"
+  max_prb_quota: "100"
+
+  # Server settings
+  decision_history_max: "1000"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: uav-policy-policies
+  namespace: oran-ric
+  labels:
+    app: uav-policy-xapp
+data:
+  # Example flight plan policies (if needed for non-RT RIC integration)
+  default_policy: "path_aware_rc_policy"
+
+  # Service profiles for QoS
+  hd_video_profile: |
+    {
+      "name": "uav-hd-video",
+      "target_bitrate_mbps": 10.0,
+      "min_sinr_db": -5.0
+    }
+
+  realtime_control_profile: |
+    {
+      "name": "uav-realtime-control",
+      "target_bitrate_mbps": 2.0,
+      "min_sinr_db": -10.0
+    }

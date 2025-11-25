@@ -1,0 +1,9 @@
+# Example UAV flight path description (to be turned into Waypoints).
+
+uavs:
+  - uav_id: "uav-001"
+    waypoints:
+      - { index: 0, t_s: 0.0,   x: 0.0,   y: 0.0,   z: 50.0 }
+      - { index: 1, t_s: 10.0,  x: 50.0,  y: 0.0,   z: 60.0 }
+      - { index: 2, t_s: 20.0,  x: 100.0, y: 20.0,  z: 80.0 }
+      - { index: 3, t_s: 30.0,  x: 150.0, y: 40.0,  z: 90.0 }

@@ -1,0 +1,37 @@
+scenario_id: "uav-slicing-scenario-01"
+description: "Single gNB with 3-sector cells, 1 UAV UE and a group of ground UEs."
+
+ns_oran:
+  notes: |
+    This file is a high-level description of the scenario. A separate ns-3
+    script or launcher should parse this YAML and configure the ns-O-RAN
+    simulator accordingly.
+  topology:
+    gnb:
+      id: "gnb-1"
+      sectors:
+        - id: "cell-A"
+          azimuth_deg: 0
+        - id: "cell-B"
+          azimuth_deg: 120
+        - id: "cell-C"
+          azimuth_deg: 240
+    ue_groups:
+      - name: "uav-ues"
+        ue_type: "uav"
+        count: 1
+      - name: "ground-ues"
+        ue_type: "ground"
+        count: 10
+
+ric:
+  near_rt_ric:
+    address: "ric.example.local"
+    e2_port: 36421
+    kpm_xapp: "kpm-monitor"
+    rc_xapp: "uav-rc-controller"
+
+policy_pipeline:
+  flight_plan_policy_file: "../artifacts/policies/uav-001-demo.json"
+  decisions_output_dir: "../artifacts/decisions"
+  logs_dir: "../artifacts/logs"

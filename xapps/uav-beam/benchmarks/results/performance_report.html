@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAV Beam xApp Performance Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: white;
+            margin: 0;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .summary-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary-item .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .summary-item .label {
+            color: #666;
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .pass {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .fail {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .metric {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin: 2px;
+        }
+        .metric-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        .metric-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .metric-bad {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .section-title {
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>UAV Beam xApp Performance Report</h1>
+        <p>Generated: 2025-11-22 10:28:37</p>
+    </div>
+
+    <div class="summary-grid">
+        <div class="summary-item">
+            <div class="value">16</div>
+            <div class="label">Total Benchmarks</div>
+        </div>
+        <div class="summary-item">
+            <div class="value">13</div>
+            <div class="label">Targets Met</div>
+        </div>
+        <div class="summary-item">
+            <div class="value">0.769 ms</div>
+            <div class="label">Avg Latency</div>
+        </div>
+        <div class="summary-item">
+            <div class="value">914304/s</div>
+            <div class="label">Total Throughput</div>
+        </div>
+    </div>
+
+    
+    <div class="card">
+        <h2 class="section-title">Beam Tracker Performance</h2>
+        <table>
+            <tr>
+                <th>Benchmark</th>
+                <th>Iterations</th>
+                <th>p50 (ms)</th>
+                <th>p95 (ms)</th>
+                <th>p99 (ms)</th>
+                <th>Throughput</th>
+                <th>Target</th>
+            </tr>
+            
+            <tr>
+                <td>single_decision_latency</td>
+                <td>1000</td>
+                <td>0.0211</td>
+                <td>0.0256</td>
+                <td>0.0305</td>
+                <td>46005 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>decision_with_trajectory</td>
+                <td>1000</td>
+                <td>0.0204</td>
+                <td>0.0249</td>
+                <td>0.0361</td>
+                <td>47509 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>batch_throughput_10</td>
+                <td>1000</td>
+                <td>0.1902</td>
+                <td>0.2050</td>
+                <td>0.2988</td>
+                <td>52425 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>batch_throughput_50</td>
+                <td>5000</td>
+                <td>0.9226</td>
+                <td>0.9880</td>
+                <td>1.0938</td>
+                <td>54327 ops/s</td>
+                <td class="fail">FAIL</td>
+            </tr>
+
+            <tr>
+                <td>batch_throughput_100</td>
+                <td>10000</td>
+                <td>1.8306</td>
+                <td>2.0241</td>
+                <td>2.1230</td>
+                <td>54781 ops/s</td>
+                <td class="fail">FAIL</td>
+            </tr>
+
+            <tr>
+                <td>batch_throughput_500</td>
+                <td>50000</td>
+                <td>9.1463</td>
+                <td>9.3720</td>
+                <td>9.3961</td>
+                <td>55364 ops/s</td>
+                <td class="fail">FAIL</td>
+            </tr>
+
+            <tr>
+                <td>scalability_1_ues</td>
+                <td>1000</td>
+                <td>0.0211</td>
+                <td>0.0239</td>
+                <td>0.0264</td>
+                <td>46648 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>scalability_10_ues</td>
+                <td>100</td>
+                <td>0.0213</td>
+                <td>0.0325</td>
+                <td>0.0620</td>
+                <td>46548 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>scalability_100_ues</td>
+                <td>100</td>
+                <td>0.0051</td>
+                <td>0.0066</td>
+                <td>0.0219</td>
+                <td>182607 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+
+            <tr>
+                <td>scalability_1000_ues</td>
+                <td>100</td>
+                <td>0.0052</td>
+                <td>0.0080</td>
+                <td>0.0222</td>
+                <td>176881 ops/s</td>
+                <td class="pass">PASS</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title">Trajectory Predictor Performance</h2>
+        <table>
+            <tr>
+                <th>Benchmark</th>
+                <th>Iterations</th>
+                <th>p50 (ms)</th>
+                <th>p95 (ms)</th>
+                <th>p99 (ms)</th>
+                <th>Throughput</th>
+            </tr>
+            
+            <tr>
+                <td>kalman_update</td>
+                <td>500</td>
+                <td>0.0398</td>
+                <td>0.0448</td>
+                <td>0.0536</td>
+                <td>24559 ops/s</td>
+            </tr>
+
+            <tr>
+                <td>multi_uav_1</td>
+                <td>500</td>
+                <td>0.0395</td>
+                <td>0.0441</td>
+                <td>0.0530</td>
+                <td>24834 ops/s</td>
+            </tr>
+
+            <tr>
+                <td>multi_uav_5</td>
+                <td>2500</td>
+                <td>0.0382</td>
+                <td>0.0421</td>
+                <td>0.0451</td>
+                <td>25838 ops/s</td>
+            </tr>
+
+            <tr>
+                <td>multi_uav_10</td>
+                <td>5000</td>
+                <td>0.0381</td>
+                <td>0.0435</td>
+                <td>0.0677</td>
+                <td>25586 ops/s</td>
+            </tr>
+
+            <tr>
+                <td>multi_uav_50</td>
+                <td>25000</td>
+                <td>0.0387</td>
+                <td>0.0427</td>
+                <td>0.0466</td>
+                <td>25534 ops/s</td>
+            </tr>
+
+            <tr>
+                <td>multi_uav_100</td>
+                <td>50000</td>
+                <td>0.0399</td>
+                <td>0.0435</td>
+                <td>0.0473</td>
+                <td>24856 ops/s</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title">Prediction Accuracy vs Horizon</h2>
+        <table>
+            <tr>
+                <th>Horizon (ms)</th>
+                <th>Kalman RMSE (m)</th>
+                <th>Polynomial RMSE (m)</th>
+                <th>Hybrid RMSE (m)</th>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td>1.5497</td>
+                <td>0.9499</td>
+                <td>1.4986</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>1.6443</td>
+                <td>0.9875</td>
+                <td>1.5338</td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>1.8651</td>
+                <td>1.0054</td>
+                <td>1.5245</td>
+            </tr>
+
+            <tr>
+                <td>100</td>
+                <td>2.3321</td>
+                <td>1.1741</td>
+                <td>1.4542</td>
+            </tr>
+
+            <tr>
+                <td>200</td>
+                <td>3.4689</td>
+                <td>1.9250</td>
+                <td>1.7999</td>
+            </tr>
+
+            <tr>
+                <td>500</td>
+                <td>8.4530</td>
+                <td>6.7445</td>
+                <td>5.3121</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>UAV Beam xApp Performance Benchmarks</p>
+        <p>Target: Single decision latency &lt; 1ms (p99)</p>
+    </div>
+</body>
+</html>

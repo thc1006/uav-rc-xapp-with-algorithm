@@ -1,0 +1,14 @@
+# Skeleton for KPM subscriptions in an ns-O-RAN setup.
+
+subscriptions:
+  - id: "uav-kpi-stream"
+    service_model: "kpm"
+    ran_function_id: 1
+    reporting_period_ms: 100
+    metrics:
+      - "RSRP"
+      - "RSRQ"
+      - "PRB_USAGE_DL"
+      - "PRB_USAGE_UL"
+    filters:
+      ue_type: "uav"

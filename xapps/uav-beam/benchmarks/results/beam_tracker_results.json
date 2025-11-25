@@ -1,0 +1,200 @@
+{
+  "benchmark": "beam_tracker",
+  "timestamp": "2025-11-22 10:28:41",
+  "results": [
+    {
+      "name": "single_decision_latency",
+      "iterations": 1000,
+      "latency_ms": {
+        "p50": 0.0211,
+        "p95": 0.0256,
+        "p99": 0.0305,
+        "mean": 0.0217,
+        "std": 0.0027,
+        "min": 0.0096,
+        "max": 0.0748
+      },
+      "throughput_ops": 46005.33,
+      "memory_mb": {
+        "peak": 0.14,
+        "current": 0.14
+      },
+      "target_met": true
+    },
+    {
+      "name": "decision_with_trajectory",
+      "iterations": 1000,
+      "latency_ms": {
+        "p50": 0.0204,
+        "p95": 0.0249,
+        "p99": 0.0361,
+        "mean": 0.021,
+        "std": 0.0031,
+        "min": 0.0081,
+        "max": 0.0623
+      },
+      "throughput_ops": 47509.08,
+      "memory_mb": {
+        "peak": 0.13,
+        "current": 0.13
+      },
+      "target_met": true
+    },
+    {
+      "name": "batch_throughput_10",
+      "iterations": 1000,
+      "latency_ms": {
+        "p50": 0.1902,
+        "p95": 0.205,
+        "p99": 0.2988,
+        "mean": 0.1907,
+        "std": 0.0207,
+        "min": 0.05,
+        "max": 0.2988
+      },
+      "throughput_ops": 52425.23,
+      "memory_mb": {
+        "peak": 0.98,
+        "current": 0.98
+      },
+      "target_met": true
+    },
+    {
+      "name": "batch_throughput_50",
+      "iterations": 5000,
+      "latency_ms": {
+        "p50": 0.9226,
+        "p95": 0.988,
+        "p99": 1.0938,
+        "mean": 0.9203,
+        "std": 0.0945,
+        "min": 0.2232,
+        "max": 1.0938
+      },
+      "throughput_ops": 54327.26,
+      "memory_mb": {
+        "peak": 4.9,
+        "current": 4.9
+      },
+      "target_met": false
+    },
+    {
+      "name": "batch_throughput_100",
+      "iterations": 10000,
+      "latency_ms": {
+        "p50": 1.8306,
+        "p95": 2.0241,
+        "p99": 2.123,
+        "mean": 1.8255,
+        "std": 0.1932,
+        "min": 0.4337,
+        "max": 2.123
+      },
+      "throughput_ops": 54780.62,
+      "memory_mb": {
+        "peak": 9.81,
+        "current": 9.81
+      },
+      "target_met": false
+    },
+    {
+      "name": "batch_throughput_500",
+      "iterations": 50000,
+      "latency_ms": {
+        "p50": 9.1463,
+        "p95": 9.372,
+        "p99": 9.3961,
+        "mean": 9.0312,
+        "std": 0.9012,
+        "min": 2.1858,
+        "max": 9.3961
+      },
+      "throughput_ops": 55363.58,
+      "memory_mb": {
+        "peak": 49.16,
+        "current": 49.16
+      },
+      "target_met": false
+    },
+    {
+      "name": "scalability_1_ues",
+      "iterations": 1000,
+      "latency_ms": {
+        "p50": 0.0211,
+        "p95": 0.0239,
+        "p99": 0.0264,
+        "mean": 0.0214,
+        "std": 0.002,
+        "min": 0.0195,
+        "max": 0.0696
+      },
+      "throughput_ops": 46648.15,
+      "memory_mb": {
+        "peak": 0.13,
+        "current": 0.13
+      },
+      "target_met": true
+    },
+    {
+      "name": "scalability_10_ues",
+      "iterations": 100,
+      "latency_ms": {
+        "p50": 0.0213,
+        "p95": 0.0325,
+        "p99": 0.062,
+        "mean": 0.0215,
+        "std": 0.0069,
+        "min": 0.0053,
+        "max": 0.062
+      },
+      "throughput_ops": 46548.13,
+      "memory_mb": {
+        "peak": 0.11,
+        "current": 0.11
+      },
+      "target_met": true
+    },
+    {
+      "name": "scalability_100_ues",
+      "iterations": 100,
+      "latency_ms": {
+        "p50": 0.0051,
+        "p95": 0.0066,
+        "p99": 0.0219,
+        "mean": 0.0055,
+        "std": 0.0018,
+        "min": 0.0047,
+        "max": 0.0219
+      },
+      "throughput_ops": 182607.21,
+      "memory_mb": {
+        "peak": 0.1,
+        "current": 0.1
+      },
+      "target_met": true
+    },
+    {
+      "name": "scalability_1000_ues",
+      "iterations": 100,
+      "latency_ms": {
+        "p50": 0.0052,
+        "p95": 0.008,
+        "p99": 0.0222,
+        "mean": 0.0057,
+        "std": 0.002,
+        "min": 0.0047,
+        "max": 0.0222
+      },
+      "throughput_ops": 176881.05,
+      "memory_mb": {
+        "peak": 0.1,
+        "current": 0.1
+      },
+      "target_met": true
+    }
+  ],
+  "summary": {
+    "total_benchmarks": 10,
+    "targets_met": 7
+  }
+}

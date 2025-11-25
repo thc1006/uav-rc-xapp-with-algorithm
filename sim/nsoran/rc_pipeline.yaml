@@ -1,0 +1,18 @@
+# High-level description of the Non-RT -> Near-RT -> RC pipeline.
+
+pipeline:
+  steps:
+    - name: "nonrt-planning"
+      script: "../scripts/run_nonrt_planner.py"
+      description: "Generate FlightPlanPolicy JSON using the DP planner."
+
+    - name: "near-rt-policy-mock"
+      script: "../scripts/run_near_rt_mock.py"
+      description: "Replay the flight path and apply the Near-RT policy to generate ResourceDecisions."
+
+    - name: "nsoran-integration"
+      script: "../scripts/glue_policy_to_nsoran.py"
+      description: |
+        Placeholder script for integrating policy and decisions with a real
+        ns-O-RAN experiment launcher (e.g., through environment variables,
+        config files, or RPC to a controller).
