@@ -1,6 +1,6 @@
 # UAV RC xApp Policy + Non-RT Planner + ns-O-RAN Sim Skeleton
 
-This repository is a **Claude Code–friendly** scaffold for experimenting with
+This repository is scaffold for experimenting with
 O-RAN WG1 UAV use cases (Flight Path Based Dynamic UAV Radio Resource Allocation /
 Radio Resource Allocation for UAV Application Scenario) using:
 
